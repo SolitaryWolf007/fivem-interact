@@ -1,8 +1,10 @@
 # fivem-interact
-A basic script for interacting with objects/vehicles/peds for FiveM, based on lua 5.4 and OpenGL Mathematics. -- (EN)
+-- (EN)
+A basic script for interacting with objects/vehicles/peds for FiveM, based on lua 5.4 and OpenGL Mathematics. 
 This code was a quick example, nothing that can't be improved! Feel free to modify as you like!
 
-Um script básico para a interação com objetos/veículos/peds para FiveM, baseado em lua 5.4 e OpenGL Mathematics. -- (PT-BR)
+-- (PT-BR)
+Um script básico para a interação com objetos/veículos/peds para FiveM, baseado em lua 5.4 e OpenGL Mathematics.
 Este código foi um exemplo rápido, nada que não possa ser melhorado! Fique livre para modificar como preferir!
 
 ## How to Install (EN)
