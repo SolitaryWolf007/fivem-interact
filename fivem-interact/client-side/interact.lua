@@ -11,13 +11,13 @@ local isMouseEnabled = false
 --==================================================================================
 -- SCRIPT
 --==================================================================================
-exports("addInteration",function(entity,cb_click)
+exports("addInteraction",function(entity,cb_click)
     if (type(entity) ~= "number") then error("Invalid Entity"); end;
     if (type(cb_click) ~= "function") then error("Invalid Callback Function"); end;
     entities[entity] = cb_click
 end)
 
-exports("removeInteration",function(entity)
+exports("removeInteraction",function(entity)
     if (type(entity) ~= "number") then error("Invalid Entity"); end;
     entities[entity] = nil
 end)
