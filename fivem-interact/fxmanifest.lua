@@ -10,8 +10,6 @@ ui_page 'client-side/interact.html'
 file    'client-side/interact.html'
 client_script 'client-side/interact.lua'
 
-client_script 'example.lua' -- You can remove this.
-
 --[[
    -> Special thanks to key_value for presenting and exemplifying the possibility of using the OpenGL Mathematics library in FiveM.
    -> B2K Development: https://discord.gg/7YvTPnF
