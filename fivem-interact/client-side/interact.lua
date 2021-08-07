@@ -13,7 +13,7 @@ local isMouseEnabled = false
 --==================================================================================
 exports("addInteraction",function(entity,cb_click)
     if (type(entity) ~= "number") then error("Invalid Entity"); end;
-    if (type(cb_click) ~= "function") then error("Invalid Callback Function"); end;
+    if rawget(cb_click, '__cfx_functionReference') then error("Invalid Callback Function"); end;
     entities[entity] = cb_click
 end)
 
