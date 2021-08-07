@@ -47,19 +47,17 @@ RegisterNUICallback("interact",function(data,cb)
         local my = data.mouseY / h
         local r_pos, r_dir = ScreenPositionToCameraRay(mx, my)
         local b = r_pos + 10000 * r_dir
-        local i = 2
-        while i <= 16 do
-            local handle = StartExpensiveSynchronousShapeTestLosProbe(r_pos.x, r_pos.y, r_pos.z, b.x, b.y, b.z, i, ped, 7)
-            local _, hit, pos, surface, entity = GetShapeTestResult(handle)
-            if DoesEntityExist(entity) then
-                if entities[entity] then
-                    local dist = #( GetEntityCoords(ped) - pos )
-                    entities[entity](dist) 
-                    break
-                end
+
+        local handle = StartExpensiveSynchronousShapeTestLosProbe(r_pos.x, r_pos.y, r_pos.z, b.x, b.y, b.z,(1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256), ped, 7)
+        local _, hit, pos, surface, entity = GetShapeTestResult(handle)
+        if DoesEntityExist(entity) then
+            if entities[entity] then
+                local dist = #( GetEntityCoords(ped) - pos )
+                entities[entity](dist) 
+                break
             end
-            i = i*2
         end
+            
         running = false
     end
 end)
