@@ -54,7 +54,7 @@ RegisterNUICallback("interact",function(data,cb)
             if entities[entity] then
                 local dist = #( GetEntityCoords(ped) - pos )
                 entities[entity](dist) 
-                break
+                return
             end
         end
             
