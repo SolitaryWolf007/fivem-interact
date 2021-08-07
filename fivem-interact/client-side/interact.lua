@@ -18,7 +18,6 @@ exports("addInteraction",function(entity,cb_click)
     else
         error("Invalid Callback Function")
     end
-    entities[entity] = cb_click
 end)
 
 exports("removeInteraction",function(entity)
