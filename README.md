@@ -25,6 +25,13 @@ ensure sessionmanager
 ensure fivem
 ensure fivem-interact
 ```
+
+## Use (uso)
+```lua
+exports["fivem-interact"]:addInteration(entity,function(dist)
+    print("The user interacted with the entity! Dist is: "..dist)
+end)
+```
 ## Credits:
 * key_value : Special thanks especially to key_value, who brought this idea along with the group code example.
 * B2K Development Group (https://discord.gg/7YvTPnF)
