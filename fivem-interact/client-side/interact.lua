@@ -50,7 +50,7 @@ RegisterNUICallback("interact",function(data,cb)
 
         local handle = StartExpensiveSynchronousShapeTestLosProbe(r_pos.x, r_pos.y, r_pos.z, b.x, b.y, b.z,(1 | 2 | 4 | 8 | 16 | 32 | 64 | 128 | 256), ped, 7)
         local _, hit, pos, surface, entity = GetShapeTestResult(handle)
-        if DoesEntityExist(entity) then
+        if (entity ~= 0) then
             if entities[entity] then
                 local dist = #( GetEntityCoords(ped) - pos )
                 entities[entity](dist) 
@@ -69,6 +69,7 @@ RegisterCommand('+interactact',function()
         SetNuiFocus(true,true)
         while isMouseEnabled do
             DisableControlAction(0, 24, true)
+            DisablePlayerFiring(PlayerId(), true)
             Wait(1)
         end
     else
