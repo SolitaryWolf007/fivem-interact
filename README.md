@@ -29,12 +29,12 @@ ensure fivem-interact
 ## Use (uso)
 ```lua
 -- Add
-exports["fivem-interact"]:addInteration(entity,function(dist)
+exports["fivem-interact"]:addInteraction(entity,function(dist)
     print("The user interacted with the entity! Dist is: "..dist)
 end)
 
 -- Remove
-exports["fivem-interact"]:removeInteration(entity)
+exports["fivem-interact"]:removeInteraction(entity)
 ```
 ## Credits:
 * key_value : Special thanks especially to key_value, who brought this idea along with the group code example.
